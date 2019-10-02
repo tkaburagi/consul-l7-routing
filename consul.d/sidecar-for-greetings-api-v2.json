@@ -1,0 +1,23 @@
+{
+  "service": {
+    "name": "greetings-api-v2",
+    "id": "greetings-api-v2",
+    "meta": {
+      "version": "2"
+    },
+    "address": "10.5.0.5",
+    "port": 8080,
+    "connect": {
+      "sidecar_service": {
+        "port": 19003,
+        "check": {
+          "name": "Connect Envoy Sidecar",
+          "tcp": "10.5.0.5:19003",
+          "interval": "10s"
+        },
+        "proxy": {
+        }
+      }
+    }
+  }
+}
