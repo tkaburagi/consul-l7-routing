@@ -37,7 +37,7 @@ services:
   # Define api service and envoy sidecar proxy for version 1 of the service
   api_v1:
     build:
-      context: ./consul-l7-demo
+      context: ./consul-l7-api-v1
       dockerfile: Dockerfile
     networks:
       vpcbr:
